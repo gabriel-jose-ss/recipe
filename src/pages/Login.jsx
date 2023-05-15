@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
+import '../styles/Login.css';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,7 +19,8 @@ function Login() {
   };
 
   return (
-    <form>
+    <div className='container-login'>
+    <form className='login'>
       <label htmlFor="email">
         Email
         <input
@@ -50,6 +51,7 @@ function Login() {
 
       </button>
     </form>
+    </div>
   );
 }
 

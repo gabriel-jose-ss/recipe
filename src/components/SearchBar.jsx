@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import AppContext from '../contexts/AppContext';
-
+import '../styles/SearchBar.css';
 export default function SearchBar() {
   const [searchType, setSearchType] = useState('');
   const { search, setSearch, setRadioType } = useContext(AppContext);

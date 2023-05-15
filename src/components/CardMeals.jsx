@@ -1,6 +1,7 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import AppContext from '../contexts/AppContext';
+import '../styles/Home.css';
 
 const alert = 'Sorry, we haven\'t found any recipes for these filters.';
 
@@ -108,7 +109,7 @@ export default function CardMeals() {
   };
 
   return (
-    <div data-testid="meals-card">
+    <div data-testid="meals-card" className="card-meals">
       {
         category.map((list) => (
           <button
@@ -127,11 +128,13 @@ export default function CardMeals() {
       >
         All
       </button>
+      <br />
       {
         meals.map((meal, index) => (
+           
           <Link
             to={ meals.length > 1 && `/meals/${meal.idMeal}` }
-            className="card-recipe"
+            className="card-recipe meals-container"
             key={ meal.idMeal }
             data-testid={ `${index}-recipe-card` }
           >

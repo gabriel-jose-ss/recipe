@@ -1,15 +1,15 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import '../styles/Recipes.css';
-import CardMeals from '../components/CardMeals';
 import CardDrinks from '../components/CardDrinks';
+import CardMeals from '../components/CardMeals';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import '../styles/Recipes.css';
 
 function Recipes() {
   const location = useLocation();
   return (
-    <main>
+    <main style={{ padding: '20px' }} >
       <Header />
       { location.pathname === '/meals' && <CardMeals /> }
       { location.pathname === '/drinks' && <CardDrinks /> }

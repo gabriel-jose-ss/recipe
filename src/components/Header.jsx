@@ -24,7 +24,7 @@ function Header() {
       </Link>
       {isSearchPage && (
         <React.Fragment key="search">
-          <button
+          <img
             src={ searchIcon }
             alt="Search Icon"
             data-testid="search-top-btn"
