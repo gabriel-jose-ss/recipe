@@ -1,0 +1,19 @@
+.footer {
+  align-items: center;
+  background-color: #66439c;
+  border-top: 1px solid white;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+}
+
+.footer__icon {
+  filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(10deg);
+  height: 25px;
+  margin: 0 10px;
+  width: 25px;
+}

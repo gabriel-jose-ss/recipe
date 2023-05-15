@@ -1,0 +1,8 @@
+.select {
+  text-decoration: line-through solid black;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+}

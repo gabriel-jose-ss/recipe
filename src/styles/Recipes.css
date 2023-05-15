@@ -1,0 +1,21 @@
+.card-recipe {
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-around;
+  padding: 16px;
+  width: 150px;
+}
+
+.card-recipe > img {
+  width: 100px;
+}
+
+.btn-start {
+  bottom: 0;
+  position: fixed;
+}
