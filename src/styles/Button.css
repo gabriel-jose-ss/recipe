@@ -1,0 +1,18 @@
+.button-geral{
+    background-color: #e76502;
+    color: #fff;
+    font-family: Courier;
+    font-size: 15px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 16px 6px;
+    border: 2px solid #000;
+    border-radius: 13px;
+    display: inline-block;
+    box-shadow: -4px 1px 6px 3px #2D2D2D;
+    text-shadow: 2px 3px 1px #000;
+   }
+   .button-geral:active{
+    transform: scale(0.95);
+   }

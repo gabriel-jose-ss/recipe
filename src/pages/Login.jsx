@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import '../styles/Button.css';
 import '../styles/Login.css';
+
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,39 +21,51 @@ function Login() {
   };
 
   return (
+   
     <div className='container-login'>
-    <form className='login'>
+    <div className="wrap-login">
+      <form className='login-form'>
+        <div className='wrap-input'>
       <label htmlFor="email">
-        Email
-        <input
-          onChange={ ({ target }) => setEmail(target.value) }
-          data-testid="email-input"
-          type="email"
-          name="email"
-          value={ email }
-        />
-      </label>
-      <label htmlFor="password">
-        Password
-        <input
-          onChange={ ({ target }) => setPassword(target.value) }
-          data-testid="password-input"
-          type="password"
-          name="password"
-          value={ password }
-        />
-      </label>
-      <button
-        onClick={ handleClick }
-        data-testid="login-submit-btn"
-        type="button"
-        disabled={ validateForm() }
-      >
-        Enter
+  Email
+  <input
+     className={email !== "" ? "has-val input" : "input"}
+    onChange={({ target }) => setEmail(target.value)}
+    data-testid="email-input"
+    type="email"
+    name="email"
+    value={email}
+  />
+</label>
+</div>
 
-      </button>
-    </form>
+<div className='wrap-input'>
+<label htmlFor="password">
+  Password
+  <input
+  className={password !== "" ? "has-val input" : "input"}
+    onChange={({ target }) => setPassword(target.value)}
+    data-testid="password-input"
+    type="password"
+    name="password"
+    value={password}
+  />
+</label>
+</div>
+<button
+  className="button-geral"
+  onClick={handleClick}
+  data-testid="login-submit-btn"
+  type="button"
+  disabled={validateForm()}
+>
+  Enter
+</button>
+
+      </form>
+      </div>
     </div>
+
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import AppContext from '../contexts/AppContext';
+import '../styles/Home.css';
 
 const alert = 'Sorry, we haven\'t found any recipes for these filters.';
 
@@ -103,13 +104,14 @@ export default function CardDrinks() {
   };
 
   return (
-    <div data-testid="drinks-card">
+    <div data-testid="drinks-card" className='card-container'>
       {
         category.map((list) => (
           <button
             onClick={ () => handleFilter(list.strCategory) }
             data-testid={ `${list.strCategory}-category-filter` }
             key={ list.strCategory }
+            className='button-geral'
           >
             { list.strCategory }
           </button>
@@ -126,7 +128,8 @@ export default function CardDrinks() {
         drinks.map((drink, index) => (
           <Link
             to={ drinks.length > 1 && `/drinks/${drink.idDrink}` }
-            className="card-recipe"
+            className="card"
+            
             key={ drink.idDrink }
             data-testid={ `${index}-recipe-card` }
           >

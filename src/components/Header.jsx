@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 import profileIcon from '../images/profileIcon.svg';
 import searchIcon from '../images/searchIcon.svg';
+import '../styles/Header.css';
 import { getPageTitle } from './GetPageTitle';
 import SearchBar from './SearchBar';
 
@@ -18,7 +18,7 @@ function Header() {
   };
 
   return (
-    <header>
+    <header className="header-container">
       <Link to="/profile">
         <img src={ profileIcon } alt="Profile Icon" data-testid="profile-top-btn" />
       </Link>
