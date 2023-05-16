@@ -1,0 +1,43 @@
+/* Estilos para o contêiner principal */
+.SearchBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para o campo de entrada de texto */
+  .SearchBar input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para as opções de pesquisa */
+  .SearchBar label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .SearchBar label input[type="radio"] {
+    margin-left: 5px;
+  }
+  
+  /* Estilos para o botão de pesquisa */
+  .SearchBar button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .SearchBar button:hover {
+    background-color: #45a049;
+  }
+  

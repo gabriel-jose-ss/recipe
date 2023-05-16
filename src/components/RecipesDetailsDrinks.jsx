@@ -1,10 +1,11 @@
+import clipboardCopy from 'clipboard-copy';
 import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation, useParams } from 'react-router-dom';
-import clipboardCopy from 'clipboard-copy';
-import SlideMeals from './SlideMeals';
+import favoriteIcon from '../images/blackHeartIcon.svg';
 import shareIcon from '../images/shareIcon.svg';
 import noFavoriteIcon from '../images/whiteHeartIcon.svg';
-import favoriteIcon from '../images/blackHeartIcon.svg';
+import '../styles/RecipePage.css';
+import SlideMeals from './SlideMeals';
 
 const ingredients = [];
 

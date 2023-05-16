@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 import blackHeartIcon from '../images/blackHeartIcon.svg';
 import shareIcon from '../images/shareIcon.svg';
+import '../styles/Favorite.css';
+import Header from './Header';
 
 const SECONDS_NUMBERS = 3000;
 
@@ -65,10 +66,13 @@ export default function Favorites() {
   return (
     <div data-testid="favorite-component">
       <Header />
+      <div className='favorite-style'>
       <div data-testid="drink-details">
         <button
           onClick={ () => handleFilter('all') }
           data-testid="filter-by-all-btn"
+          className='button-geral'
+
         >
           All
 
@@ -76,6 +80,7 @@ export default function Favorites() {
         <button
           onClick={ () => handleFilter('meal') }
           data-testid="filter-by-meal-btn"
+          className='button-geral'
         >
           Meals
 
@@ -83,14 +88,16 @@ export default function Favorites() {
         <button
           onClick={ () => handleFilter('drink') }
           data-testid="filter-by-drink-btn"
+          className='button-geral'
+
         >
           Drinks
 
         </button>
       </div>
-      <div>
+      <div className='card-container'>
         {favoriteRecipes.map((recipe, index) => (
-          <div key={ recipe.id }>
+          <div key={ recipe.id } className='card'>
             <Link to={ `/${recipe.type}s/${recipe.id}` }>
               <img
                 width="300px"
@@ -110,6 +117,8 @@ export default function Favorites() {
               <h3 data-testid={ `${index}-horizontal-name` }>{recipe.name}</h3>
             </Link>
             <button
+                      className='button-geral'
+
               src={ shareIcon }
               data-testid={ `${index}-horizontal-share-btn` }
               onClick={ () => handleShareRecipe(index) }
@@ -117,6 +126,8 @@ export default function Favorites() {
               <img src={ shareIcon } alt="Share" />
             </button>
             <button
+              className='button-geral'
+              width="95px"
               src={ blackHeartIcon }
               data-testid={ `${index}-horizontal-favorite-btn` }
               onClick={ () => handleRemoveFavorite(index) }
@@ -125,6 +136,7 @@ export default function Favorites() {
             </button>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
