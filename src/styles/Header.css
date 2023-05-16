@@ -3,8 +3,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem;
-    background-color: #f2f2f2;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #be3300;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     position: fixed;
     top: 0;
     left: 0;
@@ -22,6 +22,6 @@
   }
   
   .page-title {
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
   

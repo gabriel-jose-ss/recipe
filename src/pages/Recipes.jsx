@@ -4,15 +4,17 @@ import CardDrinks from '../components/CardDrinks';
 import CardMeals from '../components/CardMeals';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import '../styles/Recipes.css';
+import '../styles/Home.css';
 
 function Recipes() {
   const location = useLocation();
   return (
-    <main style={{ padding: '20px' }} >
+    <main >
       <Header />
+      <div className='container-recipes'>
       { location.pathname === '/meals' && <CardMeals /> }
       { location.pathname === '/drinks' && <CardDrinks /> }
+      </div>
       <Footer />
     </main>
   );
