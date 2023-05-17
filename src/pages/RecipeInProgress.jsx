@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import RecipeIngredients from '../components/RecipeIngredients';
 import FavoriteButton from '../components/FavoriteButton';
+import RecipeIngredients from '../components/RecipeIngredients';
 import ShareButton from '../components/ShareButton';
 
 function RecipeInProgress({ recipe, type, url }) {
   if (recipe === '') {
-    return <h1>Carregando</h1>;
+    return <h1 style={{ background: '#034001' }}>Carregando</h1>;
   }
   let receita = '';
   let category = '';
@@ -26,8 +26,9 @@ function RecipeInProgress({ recipe, type, url }) {
 
   const instructions = receita.strInstructions.split('.');
   return (
-    <div className="recipe-details-container">
-      <div className="details-header">
+    <div >
+      <div className="card-container">
+        <div className='card'>
         <img
           src={ image }
           alt={ title }
@@ -41,6 +42,7 @@ function RecipeInProgress({ recipe, type, url }) {
           <ShareButton url={ url } dataTestid="share-btn" />
         </div>
         <h1 data-testid="recipe-title">{title}</h1>
+
       </div>
 
       <div className="details-wrapper">
@@ -52,6 +54,7 @@ function RecipeInProgress({ recipe, type, url }) {
         </div>
         <h1>Ingredientes</h1>
         <RecipeIngredients recipe={ receita } />
+        </div>
       </div>
     </div>
   );

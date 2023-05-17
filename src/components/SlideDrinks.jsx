@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import '../styles/slide.css';
 
 const settings = {
   arrows: true,
@@ -23,20 +24,20 @@ function SlideDrinks() {
     };
     fetchRecommendation();
   }, [setRecommendation]);
-
+  
   return (
-    <div>
-      <h3>Recommendations</h3>
-      <Slider { ...settings }>
-        { recommendation ? recommendation.map((slide, index) => (
-          <div data-testid={ `${index}-recommendation-card` } key={ slide.idDrink }>
-            <img width="80px" src={ slide.strDrinkThumb } alt={ slide.strDrink } />
-            <h5 data-testid={ `${index}-recommendation-title` }>{ slide.strDrink }</h5>
-          </div>
-        )) : null }
-      </Slider>
-    </div>
-  );
+    <div className="slide-drinks">
+    <h3>Recommendations</h3>
+    <Slider { ...settings }>
+      { recommendation ? recommendation.map((slide, index) => (
+        <div data-testid={ `${index}-recommendation-card` } key={ slide.idDrink }>
+          <img src={ slide.strDrinkThumb } alt={ slide.strDrink } />
+          <h5 data-testid={ `${index}-recommendation-title` }>{ slide.strDrink }</h5>
+        </div>
+      )) : null }
+    </Slider>
+  </div>
+  )
 }
 
 export default SlideDrinks;

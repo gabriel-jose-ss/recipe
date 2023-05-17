@@ -1,5 +1,5 @@
-import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 function FinishButton({ isFinish, recipe }) {
   const history = useHistory();
@@ -42,7 +42,7 @@ function FinishButton({ isFinish, recipe }) {
       data-testid="finish-recipe-btn"
       disabled={ !isFinish }
       onClick={ handleClick }
-      className="start-btn"
+      className="button-geral"
     >
       Finalizar
     </button>

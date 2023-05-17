@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import shareIcon from '../images/shareIcon.svg';
@@ -32,12 +32,13 @@ function DoneRecipes() {
   return (
     <div>
       <Header />
-
+<div className='card-container'>
       <div>
         <button
           onClick={ handleFilterClick }
           data-filter="all"
           data-testid="filter-by-all-btn"
+          className='button-geral'
         >
           All
         </button>
@@ -45,6 +46,7 @@ function DoneRecipes() {
           onClick={ handleFilterClick }
           data-filter="meal"
           data-testid="filter-by-meal-btn"
+          className='button-geral'
         >
           Meals
         </button>
@@ -52,13 +54,14 @@ function DoneRecipes() {
           onClick={ handleFilterClick }
           data-filter="drink"
           data-testid="filter-by-drink-btn"
+          className='button-geral'
         >
           Drinks
         </button>
       </div>
       <div>
         {filteredRecipes.map((recipe, index) => (
-          <div key={ index }>
+          <div key={ index } className='card'>
             <Link to={ `/${recipe.type}s/${recipe.id}` }>
               <img
                 width="300px"
@@ -83,10 +86,13 @@ function DoneRecipes() {
               {recipe.doneDate}
             </div>
             <button
+            
+            className='button-geral shareImg'
               data-testid="shared"
               onClick={ () => handleCopyClick(recipe.type, recipe.id) }
             >
               <img
+         
                 src={ shareIcon }
                 alt="share icon"
                 data-testid={ `${index}-horizontal-share-btn` }
@@ -105,6 +111,7 @@ function DoneRecipes() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );

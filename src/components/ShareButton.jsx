@@ -15,7 +15,7 @@ function ShareButton() {
 
   return (
     <div>
-      <button type="button" onClick={ handleShare } data-testid="share-btn">
+      <button type="button" onClick={ handleShare } data-testid="share-btn"  className='button-geral shareImg'>
         <img src={ iconBtn } alt="share-link" />
       </button>
       {isCliped && <p>Link copied!</p>}

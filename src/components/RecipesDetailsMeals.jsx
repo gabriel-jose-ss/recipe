@@ -96,8 +96,8 @@ export default function RecipesDetailsMeals() {
   };
 
   return (
-    <div data-testid="meal-details">
-      <button onClick={ handleShareClick } type="button" data-testid="share-btn">
+    <div data-testid="meal-details" className='recipes-d'>
+      <button onClick={ handleShareClick } type="button" data-testid="share-btn" className='button-geral'>
         <img src={ shareIcon } alt="Shared Icon" />
       </button>
       {copied && <p>Link copied!</p>}
@@ -106,22 +106,23 @@ export default function RecipesDetailsMeals() {
         onClick={ handleFavorite }
         type="button"
         data-testid="favorite-btn"
+        className='button-geral'
       >
         <img src={ isFavorite ? favoriteIcon : noFavoriteIcon } alt="Shared Icon" />
       </button>
       {
         meals.map((meal) => (
-          <div key={ meal.idMeal }>
+          <div key={ meal.idMeal } className='card'>
             <img
               width="300px"
               data-testid="recipe-photo"
               src={ meal.strMealThumb }
               alt={ meal.strMeal }
             />
-            <h3 data-testid="recipe-title">{ meal.strMeal }</h3>
+            <h3 data-testid="recipe-title" >{ meal.strMeal }</h3>
             <h4 data-testid="recipe-category">{ meal.strCategory }</h4>
             <h5>Ingredients</h5>
-            <ul>
+            <ul style={{ color: 'black', listStyle: 'circle' }}>
               {
                 ingredients.map((ingredient, index) => (
                   <li
@@ -146,7 +147,7 @@ export default function RecipesDetailsMeals() {
       }
       <SlideDrinks />
       <button
-        className="btn-start"
+        className="button-geral"
         type="button"
         data-testid="start-recipe-btn"
         onClick={ handleClick }

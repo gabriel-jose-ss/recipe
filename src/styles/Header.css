@@ -1,27 +1,32 @@
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem;
-    background-color: #be3300;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
- 
-  }
-  
-  .profile-icon {
-    cursor: pointer;
-  }
-  
-  .search-icon {
-    cursor: pointer;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: #be3300;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.profile-icon {
+  cursor: pointer;
+}
+
+.search-icon {
+  cursor: pointer;
+}
+
+.page-title {
+  margin-left: 2rem;
+}
+
+
+@media (max-width: 768px) {
   .page-title {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
-  
+}

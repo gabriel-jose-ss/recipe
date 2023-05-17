@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import logo from '../images/logomarca.png';
 import '../styles/Button.css';
 import '../styles/Login.css';
 
@@ -23,9 +24,9 @@ function Login() {
   return (
    
     <div className='container-login'>
-    <div className="wrap-login">
+      <img src={ logo } alt="" width='250px'/>
+
       <form className='login-form'>
-        <div className='wrap-input'>
       <label htmlFor="email">
   Email
   <input
@@ -37,9 +38,9 @@ function Login() {
     value={email}
   />
 </label>
-</div>
 
-<div className='wrap-input'>
+
+
 <label htmlFor="password">
   Password
   <input
@@ -51,7 +52,7 @@ function Login() {
     value={password}
   />
 </label>
-</div>
+
 <button
   className="button-geral"
   onClick={handleClick}
@@ -63,7 +64,7 @@ function Login() {
 </button>
 
       </form>
-      </div>
+
     </div>
 
   );

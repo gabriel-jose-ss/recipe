@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useEffect, useMemo, useState } from 'react';
 import blackHeartIcon from '../images/blackHeartIcon.svg';
 import whiteHeartIcon from '../images/whiteHeartIcon.svg';
 
@@ -51,8 +51,9 @@ function FavoriteButton({ recipe }) {
   };
 
   return (
-    <button type="button" onClick={ handleFavoriteBtn }>
+    <button type="button" onClick={ handleFavoriteBtn }   className='button-geral shareImg'>
       <img
+    
         data-testid="favorite-btn"
         src={ isFavorited ? blackHeartIcon : whiteHeartIcon }
         alt="favorite-link"

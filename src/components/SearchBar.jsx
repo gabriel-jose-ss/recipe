@@ -67,6 +67,7 @@ export default function SearchBar() {
         type="button"
         data-testid="exec-search-btn"
         onClick={ handleSearch }
+        className='button-geral'
       >
         Search
 

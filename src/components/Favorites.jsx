@@ -66,7 +66,7 @@ export default function Favorites() {
   return (
     <div data-testid="favorite-component">
       <Header />
-      <div className='favorite-style'>
+      <div className='favorite-style main card-container'>
       <div data-testid="drink-details">
         <button
           onClick={ () => handleFilter('all') }
@@ -101,7 +101,7 @@ export default function Favorites() {
             <Link to={ `/${recipe.type}s/${recipe.id}` }>
               <img
                 width="300px"
-                className="recipe-image"
+                
                 src={ recipe.image }
                 alt={ recipe.name }
                 data-testid={ `${index}-horizontal-image` }
@@ -117,16 +117,14 @@ export default function Favorites() {
               <h3 data-testid={ `${index}-horizontal-name` }>{recipe.name}</h3>
             </Link>
             <button
-                      className='button-geral'
-
-              src={ shareIcon }
+              className='button-geral shareImg'
               data-testid={ `${index}-horizontal-share-btn` }
               onClick={ () => handleShareRecipe(index) }
             >
               <img src={ shareIcon } alt="Share" />
             </button>
             <button
-              className='button-geral'
+              className='button-geral shareImg'
               width="95px"
               src={ blackHeartIcon }
               data-testid={ `${index}-horizontal-favorite-btn` }
